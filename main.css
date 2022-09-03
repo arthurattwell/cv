@@ -94,20 +94,36 @@ a {
     
     body {
         font-size: 10pt;
+        line-height: 14pt;
         margin: 0;
         padding: 0;
     }
 
     h1, h2, h3, h4, h5, h6 {
-        margin-bottom: 0;
+        font-size: 12pt;
+        line-height: 14pt;
+        margin-bottom: 14pt;
+        margin-top: 28pt;
     }
 
     h1 {
+        font-size: 24pt;
+        line-height: 28pt;
         margin-top: 0;
+    }
+
+    h2 + h3 {
+        margin-top: 28pt;
+    }
+
+    h3 {
+        margin-bottom: 0;
     }
 
     p {
         break-inside: avoid;
+        font-size: 10pt;
+        line-height: 14pt;
     }
 
     a {
