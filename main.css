@@ -4,7 +4,7 @@
     --max-text-width: 38rem;
     --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     --rule-thickness: 1px;
-    --button-border-radius: 0.25rem;
+    --button-border-radius: 0.1rem;
     --color-gray-light: #d4d4d4;
     --color-gray-dark: #888;
 }
@@ -90,8 +90,9 @@ a {
 
 a#download {
     position: fixed;
-    top: 1rem;
+    bottom: 1rem;
     right: 1rem;
+    background-color: white;
     border: var(--rule-thickness) solid var(--color-gray-light);
     border-radius: var(--button-border-radius);
     color: var(--color-gray-dark);
@@ -100,6 +101,13 @@ a#download {
     font-weight: 300;
     padding: 0.25rem 0.5rem;
     text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) {
+    a#download {
+        top: 1rem;
+        bottom: auto;
+    }
 }
 
 a#download:hover {
