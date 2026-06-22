@@ -1,0 +1,12 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Arthur Attwell's CV (static site) with a script to print it to PDF.",
+  "scripts": {
+    "pdf": "node make-pdf.js"
+  },
+  "devDependencies": {
+    "puppeteer": "^23.0.0"
+  }
+}
