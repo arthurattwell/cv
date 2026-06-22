@@ -88,14 +88,12 @@ a {
     color: inherit;
 }
 
-a#download {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
+.button {
     background-color: white;
     border: var(--rule-thickness) solid var(--color-gray-light);
     border-radius: var(--button-border-radius);
     color: var(--color-gray-dark);
+    cursor: pointer;
     font-family: var(--font-system);
     font-size: 1.1rem;
     font-weight: 300;
@@ -103,15 +101,29 @@ a#download {
     text-decoration: none;
 }
 
+.button:hover {
+    background-color: var(--color-gray-light);
+}
+
+#download {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+
 @media only screen and (min-width: 600px) {
-    a#download {
+    #download {
         top: 1rem;
         bottom: auto;
     }
 }
 
-a#download:hover {
-    background-color: var(--color-gray-light);
+#short-bio {
+    display: none;
+}
+
+#toggle-bio {
+    margin-bottom: 1rem;
 }
 
 /* Print */
@@ -157,11 +169,21 @@ a#download:hover {
         line-height: 14pt;
     }
 
+    /* Keep each experience/education entry (wrapped by main.js) together,
+       so a heading is never stranded at the foot of a page. */
+    .entry {
+        break-inside: avoid;
+    }
+
     a {
         text-decoration: none;
     }
 
-    a#download {
+    #download {
+        display: none;
+    }
+
+    #toggle-bio {
         display: none;
     }
 }
